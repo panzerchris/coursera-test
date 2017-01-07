@@ -1,0 +1,12 @@
+<div class="clearfix">
+  <h3>Search Results ({{items.length}} items)</h3>
+  <div class="error" ng-show="!items.length">Nothing found.</div>
+  <ul>
+    <li ng-repeat="item in items">
+      <strong>Name:</strong> {{item.name}}<br />
+      <strong>Short Name:</strong> {{item.short_name}}<br />
+      <strong>Description:</strong> {{item.description}}<br />
+      <button ng-click="onRemove({index: $index});">Don't want this one!</button>
+    </li>
+  </ul>
+</div>
